@@ -1,0 +1,5 @@
+git init
+    2  git remote add origin https://github.com/Chonig/primer-repositorio.git
+    3  git pull origin main
+    4  git branch --m main
+    5  git branch -M main
