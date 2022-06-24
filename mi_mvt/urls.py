@@ -23,5 +23,5 @@ urlpatterns = [
     path('saludar/',saludar),
     path('nombre/',nombre),
     path('resultado/',suma),
-    path('saludo/persona/<nombre>', saludar_a),
+    path('saludo/persona/<pipi>', saludar_a),
               ]

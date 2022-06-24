@@ -11,8 +11,8 @@ def saludar (request):
 # Create your views here.
 
 
-def saludar_a(request, nombre):
-    return HttpResponse (f" Hola como estas? {nombre.upper()}")
+def saludar_a(request, pipi):
+    return HttpResponse (f" Hola como estas? {pipi.upper()}")
 
 
 
