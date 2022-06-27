@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 from django.http import HttpResponse 
 from datetime import datetime 
@@ -15,11 +16,14 @@ def saludar_a(request, pipi):
     return HttpResponse (f" Hola como estas? {pipi.upper()}")
 
 
-
 def nombre (request):
     return HttpResponse ( " Cristian Hönig ")
 
 
 def suma ( request):
+
     return HttpResponse ( 1 + 1 )
 
+def saludo_personalizado( request ):
+    context = {}
+    return render ( request,"mi_app/index.html", context)
