@@ -2,7 +2,7 @@ from multiprocessing import context
 from django.shortcuts import render
 from django.http import HttpResponse 
 from datetime import datetime 
-
+from mi_app.models import Curso
 
 
 
@@ -27,3 +27,9 @@ def suma ( request):
 def saludo_personalizado( request ):
     context = {}
     return render ( request,"mi_app/index.html", context)
+
+
+def listar( request ):
+    context = {}
+    context["cursos"]= Curso.objects.all()
+    return render ( request, "mi_app/index.html", context )
